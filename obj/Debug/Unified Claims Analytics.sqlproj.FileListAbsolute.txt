@@ -1,0 +1,5 @@
+C:\Users\tmcgowen\OneDrive - U.S. Preventive Medicine\Projects\Github\ClaimsAppDev\Unified Claims Analytics\bin\Debug\Unified Claims Analytics.dacpac
+C:\Users\tmcgowen\OneDrive - U.S. Preventive Medicine\Projects\Github\ClaimsAppDev\Unified Claims Analytics\bin\Debug\Unified_Claims_Analytics.dll
+C:\Users\tmcgowen\OneDrive - U.S. Preventive Medicine\Projects\Github\ClaimsAppDev\Unified Claims Analytics\bin\Debug\Unified_Claims_Analytics.pdb
+C:\Users\tmcgowen\OneDrive - U.S. Preventive Medicine\Projects\Github\ClaimsAppDev\Unified Claims Analytics\obj\Debug\Unified_Claims_Analytics.dll
+C:\Users\tmcgowen\OneDrive - U.S. Preventive Medicine\Projects\Github\ClaimsAppDev\Unified Claims Analytics\obj\Debug\Unified_Claims_Analytics.pdb

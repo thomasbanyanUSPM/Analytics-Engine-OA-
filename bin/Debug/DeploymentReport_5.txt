@@ -1,0 +1,38 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[PPPY_Summary]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[PPPY_Summary].[NbrMths] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[PPPY_Summary] (Table)
+     Create
+       [dbo].[Reporting_Parms] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Reporting_Parms] (Default Constraint)
+       [dbo].[Member_CondHier_PPPM_vw] (View)
+       [dbo].[Member_PrimaryConditions_PPPM_vw] (View)
+       [dbo].[fnCheckCustomFlag] (Function)
+       [dbo].[HealthCareSpend_Excl_Summary] (View)
+       [dbo].[HealthCareSpend_Summary] (View)
+     Alter
+       [dbo].[Member_Claims_Util_PPPY_vw] (View)
+
+** Supporting actions
+
+The column [dbo].[PPPY_Summary].[NbrMths] is being dropped, data loss could occur.
+The column clientID on table [dbo].[PPPY_Summary] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column MemberID on table [dbo].[PPPY_Summary] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

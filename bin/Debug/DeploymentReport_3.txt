@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Member_Pharmacy_PPPM_vw] (View)
+     Create
+       [dbo].[Member_Claims_PPPM_vw] (View)
+       [dbo].[Member_Claims_Util_PPPY_vw] (View)
+
+** Supporting actions

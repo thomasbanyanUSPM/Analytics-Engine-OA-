@@ -1,0 +1,28 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[MemberProfile_Core]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[MemberProfile_Core].[AltID] is being dropped, data loss could occur.
+       The column [dbo].[MemberProfile_Core].[PriMemberID] is being dropped, data loss could occur.
+       The column [dbo].[MemberProfile_Core].[PriSSN] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[MemberProfile_Core] (Table)
+     Create
+       [dbo].[Diagnosis_Core] (Table)
+       [dbo].[Med_Services_Core] (Table)
+       [dbo].[MedicalClaim_Core] (Table)
+       Default Constraint: unnamed constraint on [dbo].[MedicalClaim_Core] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[MedicalClaim_Core] (Default Constraint)
+
+** Supporting actions
+
+The column [dbo].[MemberProfile_Core].[AltID] is being dropped, data loss could occur.
+The column [dbo].[MemberProfile_Core].[PriMemberID] is being dropped, data loss could occur.
+The column [dbo].[MemberProfile_Core].[PriSSN] is being dropped, data loss could occur.
+

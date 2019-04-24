@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Unified_Claims_Analytics</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{6c955a50-2db2-4aa0-a36d-44185be63e63}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Unified_Claims_Analytics</RootNamespace>
+    <AssemblyName>Unified_Claims_Analytics</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MedicalClaims_Base.sql" />
+    <Build Include="dbo\Tables\PharmClaims_Base.sql" />
+    <Build Include="dbo\Tables\MemberProfile_Base.sql" />
+    <Build Include="dbo\Tables\DateTable_Month.sql" />
+    <Build Include="dbo\Tables\DateTable_YrMth.sql" />
+    <Build Include="dbo\Tables\ref_Condition.sql" />
+    <Build Include="dbo\Tables\ref_ICDcd.sql" />
+    <Build Include="dbo\Tables\ref_ICDtoCond.sql" />
+    <Build Include="dbo\Views\DateTable_Analytic_Year_vw.sql" />
+    <Build Include="dbo\Views\Member_Conditions_vw.sql" />
+    <Build Include="dbo\Views\Member_Conditions_PPPM_vw.sql" />
+    <Build Include="dbo\Views\Member_PPPM_vw.sql" />
+    <Build Include="dbo\Views\Member_Pharmacy_PPPM_vw.sql" />
+    <Build Include="dbo\Tables\MemberProfile_Core.sql" />
+    <Build Include="dbo\Tables\MemberEligibility_Core.sql" />
+    <Build Include="dbo\Tables\MedicalClaim_Core.sql" />
+    <Build Include="dbo\Tables\Med_Services_Core.sql" />
+    <Build Include="dbo\Tables\Diagnosis_Core.sql" />
+    <Build Include="dbo\Tables\Member_PPPM.sql" />
+    <Build Include="dbo\Views\Member_ClaimDays_vw.sql" />
+    <Build Include="dbo\Views\Member_Exclusions_vw.sql" />
+    <Build Include="dbo\Tables\Numbers.sql" />
+    <Build Include="dbo\Views\Member_Exclusion_PPPM_vw.sql" />
+    <Build Include="dbo\Views\Member_Claims_PPPM_vw.sql" />
+    <Build Include="dbo\Views\Member_Claims_Util_PPPY_vw.sql" />
+    <Build Include="dbo\Tables\Member_Claims_PPPM.sql" />
+    <Build Include="dbo\Tables\Member_Pharamcy_PPPM.sql" />
+    <Build Include="dbo\Views\HealthCareSpend_Summary.sql" />
+    <Build Include="dbo\Tables\PPPY_Summary.sql" />
+    <Build Include="dbo\Tables\Reporting_Parms.sql" />
+    <Build Include="dbo\Views\HealthCareSpend_Excl_Summary.sql" />
+    <Build Include="dbo\Views\Member_ConditionsPrimary_PPPM_vw.sql" />
+    <Build Include="dbo\Views\Member_ConditonsHier_PPPM_vw.sql" />
+    <Build Include="dbo\Tables\fnCheckCustomFlag.sql" />
+    <Build Include="dbo\Views\Member_ConditionsPrimaryHier_PPPM_vw.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Unified Claims Analytics.publish.xml" />
+  </ItemGroup>
+</Project>
